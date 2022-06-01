@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Random Image</title>
+  <style type="text/css" media="all">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .box{
+      width: 80%;
+      margin: 10% auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .box img{
+      width: 50%;
+      height: 200px;
+      border: 1.5px solid  white;
+    }
+    button{
+      padding: 10px 20px;
+      display: block;
+      margin: auto;
+    }
+    @media screen and (min-width:699px) {
+      .box{
+        width: 60%;
+      }
+    }
+  </style>
+</head>
+<body>
+ <div class="box">
+   <img  src="istockphoto-1356048283-170667a.jpg"  />
+   <img src="istockphoto-1203956356-612x612.jpg"  />
+    <img src="istockphoto-1224413537-612x612.jpg" />
+     <img src="istockphoto-1317589843-612x612.jpg" />
+ </div> 
+ <button type="button" class="btn">Random Image</button>
+<script>
+  let img=document.querySelectorAll('img');
+  const [satu,dua,tiga,empat]=img;
+  let btn=document.querySelector('.btn');
+  btn.addEventListener('click',function(){
+   // let random=Math.ceil(Math.random()*3+1);
+    satu.style.order=Math.ceil(Math.random()*3)+1;
+    dua.style.order=Math.ceil(Math.random()*3)+1;
+    tiga.style.order=Math.ceil(Math.random()*3)+1;
+    empat.style.order=Math.ceil(Math.random()*3)+1;
+   
+
+  })
+</script>
+</body>
+</html>
